@@ -6,7 +6,7 @@ import Sortbtn from './Sortbtn';
 import Sform from './form';
 import $ from 'jquery';
 import './vendor/bootstrap/css/bootstrap.css';
-import './css/heroic-features.css';
+//import './css/heroic-features.css';
 import PropTypes from 'prop-types';
 
 

@@ -11,6 +11,7 @@ class Song extends React.Component {
       preview: this.props.preview
     };
   }
+
   /**
    * @description render function that returns string representation of HTML and passes preview property to Listenbtn component
    * @return {String}
@@ -18,7 +19,7 @@ class Song extends React.Component {
           render() {
             return (
               <div className="col-lg-3 col-md-6 mb-4">
-                      <div className="card">
+                      <div className="card" style={{"height":"100%"}}>
                         <img className="card-img-top" src={this.props.url} alt="image"/>
                         <div className="card-body">
                           <h4 className="card-title">{this.props.title}</h4>
