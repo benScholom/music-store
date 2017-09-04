@@ -1,3 +1,7 @@
+/**
+ * @description containing an array of objects that will be passed through as a property of the App componenet to make a default songlist
+ * @type {Object}
+ */
 let songlist = {
    'results': [
 {"wrapperType":"track", "kind":"song", "artistId":249591, "collectionId":267941, "trackId":267912, "artistName":"Sum 41", "collectionName":"All Killer No Filler", "trackName":"Fat Lip", "collectionCensoredName":"All Killer No Filler", "trackCensoredName":"Fat Lip", "artistViewUrl":"https://itunes.apple.com/us/artist/sum-41/id249591?uo=4", "collectionViewUrl":"https://itunes.apple.com/us/album/fat-lip/id267941?i=267912&uo=4", "trackViewUrl":"https://itunes.apple.com/us/album/fat-lip/id267941?i=267912&uo=4", "previewUrl":"http://a288.phobos.apple.com/us/r30/Music/45/53/47/mzm.gmbzyimo.aac.p.m4a", "artworkUrl30":"http://is5.mzstatic.com/image/thumb/Music/v4/e4/cd/57/e4cd571a-337c-a25c-b900-8caaa15ff9b6/source/30x30bb.jpg", "artworkUrl60":"http://is5.mzstatic.com/image/thumb/Music/v4/e4/cd/57/e4cd571a-337c-a25c-b900-8caaa15ff9b6/source/60x60bb.jpg", "artworkUrl100":"http://is5.mzstatic.com/image/thumb/Music/v4/e4/cd/57/e4cd571a-337c-a25c-b900-8caaa15ff9b6/source/100x100bb.jpg", "collectionPrice":7.99, "trackPrice":1.29, "releaseDate":"2001-04-22T07:00:00Z", "collectionExplicitness":"explicit", "trackExplicitness":"explicit", "discCount":1, "discNumber":1, "trackCount":13, "trackNumber":4, "trackTimeMillis":178267, "country":"USA", "currency":"USD", "primaryGenreName":"Alternative", "contentAdvisoryRating":"Explicit", "isStreamable":true}, 
