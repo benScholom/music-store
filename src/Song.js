@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Listenbtn from './Listenbtn';
+import PropTypes from 'prop-types';
 class Song extends React.Component {
   constructor(props) {
     super(props);
@@ -28,4 +29,11 @@ class Song extends React.Component {
 
           } 
         }
+            Song.propTypes = {
+  title: PropTypes.string,
+  url: PropTypes.string,
+  artists: PropTypes.string,
+  preview: PropTypes.string,
+  price: PropTypes.number
+}
         export default Song;

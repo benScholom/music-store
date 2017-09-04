@@ -7,20 +7,25 @@ import Sform from './form';
 import $ from 'jquery';
 import './vendor/bootstrap/css/bootstrap.css';
 import './css/heroic-features.css';
+import PropTypes from 'prop-types';
 
-
+/** App component that renders list of songs and contains search form for user to search an artist*/
 class App extends Component {
+  /**
+  *creating states to determine which direction songs ill sort and what songs will appear, as well as the search term used
+  *@constructor
+  */
               constructor(props){
                 super(props);
                 this.state = {
                   asort: true,
-                  term:"",
                   data: this.props.songlist,
+                  term:"",
                   artist: this.props.songlist[0].artistName
                 }
                 this.sort = this.sort.bind(this);
-                this.change = this.change.bind(this);
                 this.submit = this.submit.bind(this);
+                this.searchterm = this.searchterm.bind(this);
               }
 
               sort(event) {
@@ -36,32 +41,30 @@ class App extends Component {
                 });
               }
               }
-
-              change(event) {
-                const target = event.target;
-                const value = target.value;
+              searchterm(word) {
                 this.setState({
-                  term: value
-                });
-
+                  term:word
+                }, function(){console.log(this.state.term)});
               }
 
               submit(event) {
                 event.preventDefault();
                 var search = this.state.term;
+                console.log(search);
                 var url = "https://itunes.apple.com/search?term=<"+search+">&limit=8&entity=song"
-                console.log(url);
+                //var url = 'https://raw.githubusercontent.com/odedre/jsonHost/master/books.json';
                 $.ajax({
                   url: url,
                   dataType: 'json',
                   cache: false,
                   success: function(data) {
                     this.setState({
-                      data: data.results,
-                      artist: data.results[0].artistName
-                    });
-                    console.log(data.results);
-                    console.log(this.state.data);
+                        data: data.results,
+                        artist: data.results[0].artistName
+                        });
+                    // console.log(data.results);
+                    //console.log(data.books[search]);
+                    // console.log(this.state.data);
                   }.bind(this),
                   error: function(error) {
                     alert(error);
@@ -70,7 +73,6 @@ class App extends Component {
               }
           render() {
                var sortlist =  this.state.data;
-               console.log(sortlist);
                if (this.state.asort){
                sortlist.sort(function(a,b){
                   var textA = a.trackName.toLowerCase();
@@ -98,10 +100,14 @@ class App extends Component {
               return (<div className="container">
                 <Title artist={this.state.artist}/>
                 <Sortbtn function={this.sort} />
-                <Sform submit={this.submit} change={this.change} value={this.state.term}/>
+                <Sform submit={this.submit} search={this.searchterm}/>
                 <div className="row text-center">{list}</div>
                 </div>);
           }
+}
+/** ensure that songlist property is an array of objects*/
+App.propTypes = {
+  songlist: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default App;

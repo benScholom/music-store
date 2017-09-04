@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "jquery": "^3.2.1",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13"
@@ -12,8 +13,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "babel": {
-        "presets": ["es2015", "react"]
-      },
+      "presets": [
+        "es2015",
+        "react"
+      ]
+    },
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
