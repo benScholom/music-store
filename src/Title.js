@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-/** 
- * @description creates search title base don inputted artist's name
- */
+
         class Title extends React.Component {
           render() {
             return(<h2 className="text-center">Showing songs by: {this.props.artist}</h2>);
@@ -14,8 +12,7 @@ import PropTypes from 'prop-types';
  */
     Title.PropTypes = {
     	/**
-    	 * @description the name of the artist
-    	 * @property {PropTypes.string}
+    	 *  @property {PropTypes.string} artist - the name of the artist to display
     	 */
         artist: PropTypes.string
     }

@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
 import Listenbtn from './Listenbtn';
 import PropTypes from 'prop-types';
-/**
- * @description Song component renders or passes the track name, artist's name, price, img and preview for each song
- */
+
 class Song extends React.Component {
-/**
- * @description  constructor which creates state for song preview
- * @constructor
- */
+
   constructor(props) {
     super(props);
-    /**
-     * @description  state which includes the appropriate preview to be passed to the Listenbtn component
-     * @type {Object}
-     */
+
     this.state = {
       preview: this.props.preview
     };
   }
   /**
    * @description render function that returns string representation of HTML and passes preview property to Listenbtn component
-   * @function
    * @return {String}
    */
           render() {
@@ -45,29 +36,26 @@ class Song extends React.Component {
 
           } 
         }
-        /**
-         * @description PropTypes for Song component
-         * @type {Object}
-         */
+
             Song.propTypes = {
               /**
-               * @property {PropTypes.string} the song's name
+               * @property {PropTypes.string} song - the song's name
                */
                   title: PropTypes.string,
                 /**
-                 * @property {PropTypes.string} the url of the song's cover image
+                 * @property {PropTypes.string} url - the url of the song's cover image
                  */
                   url: PropTypes.string,
                   /**
-                   * @property {PropTypes.string} the artist's name
+                   * @property {PropTypes.string} artist - the artist's name
                    */
                   artists: PropTypes.string,
                   /**
-                   * @property {PropTypes.string} the url link to the 30 second song preview
+                   * @property {PropTypes.string} url - the url link to the 30 second song preview
                    */
                   preview: PropTypes.string,
                   /**
-                   * @property {PropTypes.number} the price of the song
+                   * @property {PropTypes.number} price - the price of the song
                    */
                   price: PropTypes.number
 }

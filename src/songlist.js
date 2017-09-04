@@ -1,6 +1,6 @@
 /**
  * @description containing an array of objects that will be passed through as a property of the App componenet to make a default songlist
- * @type {Object}
+ * @type {{results: object[]}} songlist - contains an a key leading to an array of objects 
  */
 let songlist = {
    'results': [

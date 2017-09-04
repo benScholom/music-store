@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-/**
- * @description  buttons that sort in asc or desc order
- */
+
         class Sortbtn extends React.Component {
           /**
            * @description function passed as property determines when eithe rof these buttons are clicked and sorts accordingly

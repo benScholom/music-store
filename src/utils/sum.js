@@ -1,8 +1,8 @@
 /**
  * @description random utility function for testing
- * @param  {number}
- * @param  {number}
- * @return {number}
+ * @param  {number} first - first number
+ * @param  {number} second - second number
+ * @return {number} sum
  */
 function sum(a, b) {
   return a + b;
